@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lord-rudra0/BackEnd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lord-rudra0/BackEnd/issues"
+  },
+  "homepage": "https://github.com/lord-rudra0/BackEnd#readme",
+  "dependencies": {
+    "enquirer": "^2.4.1",
+    "qr-image": "^3.2.0"
+  }
+}
