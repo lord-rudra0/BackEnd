@@ -14,7 +14,5 @@
 //     console.log(data);
 // })
 
-//QR generator
 
-import from enquirer
-import  from qr-image
+
