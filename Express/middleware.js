@@ -93,5 +93,5 @@ app.post("/submit",(req,res)=>
 
 app.listen(port,()=>
 {
-    console.log(`$port`)
+    console.log(`port is ${port}`)
 })

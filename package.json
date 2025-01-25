@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/lord-rudra0/BackEnd#readme",
   "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
     "enquirer": "^2.4.1",
+    "express": "^4.21.2",
     "fs": "^0.0.1-security",
     "inquirer": "^12.3.0",
     "qr-image": "^3.2.0"
