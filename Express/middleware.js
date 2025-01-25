@@ -65,18 +65,28 @@ const app=express();
 //     res.send("hello");
 // });
 
+
+
 // complete middleware website 
-
-
+const __dirname=dirname(fileURLToPath(import.meta.url));
+var band_name="";
+app.use(bodyParser.urlencoded({extended:true}));
+function generate_name(req,res,next)
+    {
+        console.log(req.body);
+        band_name=req.body["street"]+req.body["pet"];
+        next();
+    }
 app.get("/",(req,res)=>
 {
-    res.sendFile(__dirname+"/public/middleware.html")
+    res.sendFile(__dirname + "/public/middleware.html")
 
 })
 
+app.use(generate_name)
 app.post("/submit",(req,res)=>
 {
-    res.send("<h1> your band name is:</h1> <h2>${band_name}</h2>")
+    res.send(`<h1> your band name is:</h1> <h2> ${band_name} </h2>`)
 })
 
 
