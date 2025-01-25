@@ -9,12 +9,19 @@
 
 <body>
     <h1>
-        <%= data.title %>
+        Hey bro
+        <%= dayType %>
+            <%= advice %>
+
     </h1>
 
-    <p>
-        <%= data.seconds %>
-    </p>
+    <ul>
+        <% for(let i=0;i<fruits.length;i++) {%>
+            <li>
+                <%= fruits[i] %>
+            </li>
+            <% }%>
+    </ul>
 
     <h3>
         <% if (data.seconds%2===0) {%>
@@ -30,6 +37,56 @@
                 <% } %>
 
     </h3>
+
+
+
+
+    <% if (data.seconds%2===0) {%>
+        <ul>
+            <% data.bowls.forEach((fruits)=>{%>
+
+                <li>
+                    <%= fruits %>
+                </li>
+                <% }); %>
+        </ul>
+        <% } else { %>
+            <p>No Item </p>
+            <% } %>
+
+
+
+
+
+                <!-- data -->
+                <h1>
+                    <%= data.title %>
+                </h1>
+
+                <p>
+                    <%= data.seconds %>
+                </p>
+
+                <h3>
+                    <% if (data.seconds%2===0) {%>
+                        <ul>
+                            <% for(let i=0; i<data.bowls.length;i++) {%>
+                                <li>
+                                    <%= data.bowls[i] %>
+                                </li>
+                                <% } %>
+                        </ul>
+                        <% } else { %>
+                            <p>No Item </p>
+                            <% } %>
+
+                </h3>
+
+                <p>
+                    <%- data.html_content %>
+                </p>
+
+                <%- include("footer.ejs") %>
 </body>
 
 </html>
