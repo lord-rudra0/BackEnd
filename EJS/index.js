@@ -6,10 +6,20 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.get("/",(req,res)=>
 {
+    const today=new Date();
+    const day=today.getDay();
+
+    // console.log(day)
+    let type="a Week Day";
+    let adv=" Work Harder"
+    if (day===0||day===6)
+    {
+     type="The Weekend Day";
+     adv="Chill "
+    }
     res.render("index.ejs",{
-        dayType:"a Week Day",
-        advice:" Work Harder",
-        dayType2:"a weekend "
+        dayType:type,
+        advice:adv,
     });
 })
 
