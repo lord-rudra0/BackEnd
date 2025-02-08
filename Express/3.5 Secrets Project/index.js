@@ -29,13 +29,14 @@ app.use(verify);
 
 app.get("/",(req,res)=>
     {
-        res.sendFile(__dirname+"/public/index.html")
+        res.sendFile(`${__dirname}/public/index.html`)
     })
 
 app.post("/check",(req,res)=>
 {
    if (is_Authorize)
    {
+    // biome-ignore lint/style/useTemplate: <explanation>
     res.sendFile(__dirname+"/public/secret.html");
    }
    else
